@@ -5,7 +5,21 @@ fn print_integer(x: i8) {
     println!("Binary {:0b}", x);
 }
 
-
+fn underflow() {
+    let mut x:i8 = 1;
+    for _i in 1..1234 {
+        print!("{}", x);
+        x = x - 1;
+    }
+}
+fn overflow() {
+    print!("--------------Overflow-------------------");
+    let mut x:i8 = 1;
+    for _i in 1..123254 {
+        println!("{}", x);
+        x = x + 1;
+    }
+}
 fn main() {
     let mut signed: i8 = 23;
     print_integer(signed);
@@ -14,5 +28,8 @@ fn main() {
     print_integer(signed);
 
     let smilie = '😻';
-    println!("{}", smilie)
+    println!("{}", smilie);
+
+    overflow();
+    underflow();
 }
