@@ -6,6 +6,7 @@ fn print_integer(x: i8) {
 }
 
 fn underflow() {
+    print!("--------------Underflow-------------------");
     let mut x:i8 = 1;
     for _i in 1..1234 {
         print!("{}", x);
